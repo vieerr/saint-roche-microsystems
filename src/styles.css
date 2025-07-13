@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Base Neo-Brutalism Styles */
+:root {
+  --neobrutal-border: 3px solid black;
+  --neobrutal-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+  --neobrutal-radius: 0;
+}
+
+/* Button - Base Style */
+.btn {
+  @apply rounded-[var(--neobrutal-radius)] border-3 border-black bg-white text-black font-bold;
+  @apply shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] px-6 py-3;
+  @apply transition-all duration-100 ease-linear;
+  @apply hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px];
+  @apply active:shadow-none active:translate-x-[5px] active:translate-y-[5px];
+  @apply focus:shadow-none focus:transition-all focus:translate-x-[2px] focus:translate-y-[2px] ;
+}
+
+/* Button - Color Variants */
+.btn-primary {
+  @apply bg-primary text-primary-content border-black;
+}
+.btn-secondary {
+  @apply bg-secondary text-secondary-content border-black;
+}
+.btn-accent {
+  @apply bg-accent text-accent-content border-black;
+}
+
+/* Card */
+.card {
+  @apply border-3 border-black bg-white shadow-[5px_5px_0px_0px_rgba(0,0,0,1)];
+  @apply rounded-[var(--neobrutal-radius)];
+}
+.card-body {
+  @apply p-6;
+}
+
+/* Input, Select, Textarea */
+.input,
+.select,
+.textarea {
+  @apply border-3 border-black bg-white rounded-[var(--neobrutal-radius)] px-4 py-3;
+  @apply focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
+}
+
+/* Alert */
+.alert {
+  @apply border-3 border-black rounded-[var(--neobrutal-radius)] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)];
+}
+
+/* Badge */
+.badge {
+  @apply border-2 border-black rounded-[var(--neobrutal-radius)] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)];
+}
+
+/* Tabs */
+.tab {
+  @apply border-3 border-b-0 border-black rounded-t-[var(--neobrutal-radius)];
+  @apply shadow-[3px_0px_0px_0px_rgba(0,0,0,1)];
+}
+.tab-active {
+  @apply bg-primary text-primary-content border-black;
+}
+
+/* Toggle */
+.toggle {
+  @apply border-3 border-black;
+}
+.toggle:checked {
+  @apply bg-primary border-primary;
+}
+
+/* Checkbox */
+.checkbox {
+  @apply border-3 border-black rounded-[var(--neobrutal-radius)] h-6 w-6;
+}
+.checkbox:checked {
+  @apply bg-primary border-primary;
+}
+
+/* Radio */
+.radio {
+  @apply border-3 border-black;
+}
+.radio:checked {
+  @apply bg-primary border-primary;
+}
+
+/* Range */
+.range {
+  @apply border-3 border-black;
+}
+.range::-webkit-slider-thumb {
+  @apply border-3 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)];
+}
+
+/* Progress */
+.progress {
+  @apply border-3 border-black rounded-[var(--neobrutal-radius)];
+}
+.progress::-webkit-progress-bar {
+  @apply bg-white;
+}
+.progress::-webkit-progress-value {
+  @apply bg-primary;
+}
+
+/* Tooltip */
+.tooltip {
+  @apply border-3 border-black bg-white text-black px-3 py-2 rounded-[var(--neobrutal-radius)];
+  @apply shadow-[3px_3px_0px_0px_rgba(0,0,0,1)];
+}
+
+/* Menu */
+.menu {
+  @apply border-3 border-black rounded-[var(--neobrutal-radius)] shadow-[5px_5px_0px_0px_rgba(0,0,0,1)];
+}
+.menu-item {
+  @apply border-b-3 border-black last:border-b-0;
+}
+.menu-item:hover {
+  @apply bg-gray-100;
+}
