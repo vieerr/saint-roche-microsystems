@@ -1,26 +1,27 @@
 @import "tailwindcss";
-@plugin "daisyui";
-
+@plugin "daisyui" {
+  themes: nord;
+}
 /* Base Neo-Brutalism Styles */
 :root {
   --neobrutal-border: 3px solid black;
-  --neobrutal-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+  --neobrutal-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
   --neobrutal-radius: 0;
 }
 
 /* Button - Base Style */
 .btn {
-  @apply rounded-[var(--neobrutal-radius)] border-3 border-black bg-white text-black font-bold;
+  @apply rounded-sm border-3 border-black bg-white text-white font-bold;
   @apply shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] px-6 py-3;
   @apply transition-all duration-100 ease-linear;
   @apply hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px];
   @apply active:shadow-none active:translate-x-[5px] active:translate-y-[5px];
-  @apply focus:shadow-none focus:transition-all focus:translate-x-[2px] focus:translate-y-[2px] ;
+  @apply focus:shadow-none focus:transition-all focus:translate-x-[2px] focus:translate-y-[2px];
 }
 
 /* Button - Color Variants */
 .btn-primary {
-  @apply bg-primary text-primary-content border-black;
+  @apply bg-primary border-black;
 }
 .btn-secondary {
   @apply bg-secondary text-secondary-content border-black;
