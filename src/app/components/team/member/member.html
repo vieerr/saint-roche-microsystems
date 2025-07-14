@@ -1,0 +1,13 @@
+<div class="card bg-base-100 shadow-xl">
+  <div class="card-body">
+    <h3 class="card-title">{{ name }}</h3>
+    <p class="text-sm text-gray-500">{{ role }}</p>
+    <div class="divider">Habilidades</div>
+    <div class="flex flex-wrap gap-2">
+      <div *ngFor="let skill of skills" class="badge badge-primary gap-2">
+        <fa-icon size="lg" [icon]="skill.icon" class="text-white"></fa-icon>
+        {{skill.name}}
+      </div>
+    </div>
+  </div>
+</div>
