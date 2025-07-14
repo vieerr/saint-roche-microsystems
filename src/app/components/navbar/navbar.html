@@ -1,20 +1,26 @@
-<!-- app.component.html -->
-<nav class="navbar bg-base-100 shadow-sm">
-  <div class="container mx-auto flex justify-between items-center px-4 py-2">
-    <!-- Logo -->
-    <a routerLink="/" class="btn btn-ghost px-0 h-20">
-      <img src="image.png" alt="Company Logo" class="h-full md:h-16" />
+<nav class="navbar bg-base-100 shadow-sm sticky top-0 z-50">
+  <!-- Logo on left -->
+  <div class="navbar-start">
+    <a routerLink="/" class="btn btn-ghost px-0 h-16 md:h-20 min-h-0">
+      <img
+        src="image.png"
+        alt="Company Logo"
+        class="h-full max-h-16 md:max-h-20"
+      />
     </a>
+  </div>
 
-    <!-- Desktop Navigation -->
+  <!-- Desktop menu in center -->
+  <div class="navbar-center hidden lg:flex">
     <ul
-      class="hidden lg:flex menu menu-horizontal gap-2 text-primary font-medium"
+      class="menu menu-horizontal gap-1 xl:gap-2 text-primary font-medium px-1"
     >
       <li>
         <a
           routerLink="/"
           routerLinkActive="font-bold border-b-2 border-primary"
           [routerLinkActiveOptions]="{ exact: true }"
+          class="px-3 py-2 text-sm xl:text-base"
           >Inicio</a
         >
       </li>
@@ -22,6 +28,7 @@
         <a
           routerLink="/about-us"
           routerLinkActive="font-bold border-b-2 border-primary"
+          class="px-3 py-2 text-sm xl:text-base"
           >Sobre Nosotros</a
         >
       </li>
@@ -29,6 +36,7 @@
         <a
           routerLink="/team"
           routerLinkActive="font-bold border-b-2 border-primary"
+          class="px-3 py-2 text-sm xl:text-base"
           >Nuestro Equipo</a
         >
       </li>
@@ -36,64 +44,46 @@
         <a
           routerLink="/contact-us"
           routerLinkActive="font-bold border-b-2 border-primary"
+          class="px-3 py-2 text-sm xl:text-base"
           >Contáctanos</a
         >
       </li>
     </ul>
-
-    <!-- Mobile Hamburger -->
-    <div class="lg:hidden">
-      <button class="btn btn-square btn-ghost" (click)="toggleMenu()">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
 
-  <!-- Mobile Dropdown Menu -->
-  <div *ngIf="isMenuOpen" class="lg:hidden bg-base-100 shadow-md">
-    <ul class="menu w-full p-2 rounded-box space-y-1">
-      <li>
-        <a routerLink="/inicio" routerLinkActive="active" (click)="toggleMenu()"
-          >Inicio</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/sobre-nosotros"
-          routerLinkActive="active"
-          (click)="toggleMenu()"
-          >Sobre Nosotros</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/nuestro-equipo"
-          routerLinkActive="active"
-          (click)="toggleMenu()"
-          >Nuestro Equipo</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="/contactanos"
-          routerLinkActive="active"
-          (click)="toggleMenu()"
-          >Contáctanos</a
-        >
-      </li>
-    </ul>
+  <div class="navbar-end">
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-primary lg:hidden">
+        <fa-icon size="2xl" [icon]="faHamburger"></fa-icon>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+      >
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="font-bold bg-primary/10"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a routerLink="/about-us" routerLinkActive="font-bold bg-primary/10"
+            >Sobre Nosotros</a
+          >
+        </li>
+        <li>
+          <a routerLink="/team" routerLinkActive="font-bold bg-primary/10"
+            >Nuestro Equipo</a
+          >
+        </li>
+        <li>
+          <a routerLink="/contact-us" routerLinkActive="font-bold bg-primary/10"
+            >Contáctanos</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
