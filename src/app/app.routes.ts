@@ -5,7 +5,7 @@ import { Team } from './components/team/team';
 import { ContactUs } from './components/contact-us/contact-us';
 
 export const routes: Routes = [
-  { path: '', component: Home },
+  { path: '', component: Home , pathMatch: 'full' },
   { path: 'about-us', component: AboutUs },
   { path: 'team', component: Team },
   { path: 'contact-us', component: ContactUs }
