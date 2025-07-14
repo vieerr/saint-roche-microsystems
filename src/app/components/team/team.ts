@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
+import Aos from 'aos';
 
 interface TeamMember {
   name: string;
@@ -28,6 +29,9 @@ interface TeamMember {
   styleUrl: './team.css',
 })
 export class Team {
+  ngOnInit() {
+    Aos.init();
+  }
   constructor() {
     library.add(
       faCode,
