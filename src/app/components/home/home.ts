@@ -3,9 +3,10 @@ import { AutoScrollCarouselComponent } from '../auto-scroll-carousel/auto-scroll
 import { fadeInUpAnimation } from '../../effects/fade';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import AOS from 'aos';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
-  imports: [AutoScrollCarouselComponent],
+  imports: [AutoScrollCarouselComponent, RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

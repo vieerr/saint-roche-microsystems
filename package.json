@@ -23,11 +23,16 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@tailwindcss/postcss": "^4.1.11",
+    "angular-three": "^3.7.2",
     "aos": "^2.3.4",
+    "install": "^0.13.0",
     "ionicons": "^8.0.13",
+    "npm": "^11.4.2",
     "postcss": "^8.5.6",
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.1.11",
+    "three": "^0.172.0",
+    "three-stdlib": "^2.36.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
